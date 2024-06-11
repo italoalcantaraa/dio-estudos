@@ -10,7 +10,6 @@ public class operadores7 {
         System.out.println("1 - " + result);
 
         result = teste1 || teste2 ? "Uma os ambas são verdadeiras" : "Falso";
-        System.out.println("2 - " + result);
-        
+        System.out.println("2 - " + result);   
     }
 }
