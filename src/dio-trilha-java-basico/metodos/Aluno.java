@@ -8,6 +8,5 @@ public class Aluno {
         System.out.println("Nome: " + this.nome);
         System.out.println("Idade: " + this.idade);
     }
-        
 }
 
