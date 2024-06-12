@@ -3,7 +3,8 @@ public class CondicionalSimples {
         int saldo = 1000;
         int saque = 900;
 
-        if (saque < saldo) {
+        // Verifica se o saque é menor que o saque
+        if (saque < saldo) { 
             saldo = saldo - saque;
         }
 
