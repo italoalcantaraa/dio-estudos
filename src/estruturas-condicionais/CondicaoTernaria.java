@@ -5,5 +5,5 @@ public class CondicaoTernaria {
                 : mediaAluno < 7 && mediaAluno >= 5 ? "Recuperação!" : "Reprovado";
 
                 System.out.println("Estado: " + resultadoAluno);
-    }
+    }   
 }
