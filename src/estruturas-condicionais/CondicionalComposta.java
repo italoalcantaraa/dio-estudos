@@ -10,6 +10,5 @@ public class CondicionalComposta {
         } else {
             System.out.println("Saldo insuficiente ) =");
         }
-        
     }
 }

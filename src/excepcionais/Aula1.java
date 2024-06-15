@@ -1,5 +1,6 @@
 package excepcionais;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Aula1 {
@@ -15,8 +16,8 @@ public class Aula1 {
 
             System.out.println("Informe a idade: ");
             idade = ler.nextInt();
-        } catch (Exception e) {
-            System.err.println("Error!");
+        } catch (InputMismatchException ex) {
+            System.err.println(ex);
         }
     }
 }
