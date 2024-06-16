@@ -1,2 +1,2 @@
 # dio-estudos
-Estudos referente ao curso da Dio
+Estudos referente ao curso de Java
