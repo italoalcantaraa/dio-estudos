@@ -1,4 +1,4 @@
-package exercicios.Escola;
+package gettersAndSetters.Escola;
 
 public class Aluno {
     private String nome;

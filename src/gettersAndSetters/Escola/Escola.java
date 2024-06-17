@@ -1,4 +1,4 @@
-package exercicios.Escola;
+package gettersAndSetters.Escola;
 
 public class Escola {
     public static void main(String[] args) {
