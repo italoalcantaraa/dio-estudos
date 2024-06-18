@@ -11,7 +11,7 @@ public class SistemaCadastro {
 
         System.out.println("Informe o cpf: ");
         long cpf = ler.nextLong();
-
+        
         System.out.println("Informe o endereço: ");
         String endereco = ler.next();
 
