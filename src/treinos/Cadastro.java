@@ -1,4 +1,4 @@
-package UML;
+package treinos;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package UML;
+package treinos;
 
 public class Usuario {
     private String email;
