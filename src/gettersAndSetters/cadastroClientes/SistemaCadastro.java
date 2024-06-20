@@ -1,4 +1,4 @@
-package gettersAndSetters.cadatroClientes;
+package gettersAndSetters.cadastroClientes;
 
 import java.util.Scanner;
 

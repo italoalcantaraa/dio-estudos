@@ -1,4 +1,4 @@
-package gettersAndSetters.cadatroClientes;
+package gettersAndSetters.cadastroClientes;
 
 public class Cliente {
     private String nome;

@@ -1,6 +1,6 @@
 package Abstracao;
 
-public class Ferrari {
+public class Ferrari extends Carro{
     public void ligar(){
         System.out.println("A Ferrari ligou!");
     }
