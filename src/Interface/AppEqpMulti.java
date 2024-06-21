@@ -7,7 +7,7 @@ import Interface.impressora.Deskjet;
 import Interface.impressora.Impressora;
 import Interface.impressora.Laserjet;
 
-public class App {
+public class AppEqpMulti {
     public static void main(String[] args) {
         EquipamentoMultifuncional equipamenteMultifuncional = new EquipamentoMultifuncional();
 
