@@ -1,4 +1,4 @@
-    package Abstracao;
+    package Abstracao.exercicios;
 
     public abstract class Carro {
         public abstract void ligar();

@@ -1,4 +1,4 @@
-package Abstracao;
+package Abstracao.exercicios;
 
 public class Fusca extends Carro{
     
