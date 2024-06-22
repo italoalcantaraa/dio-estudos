@@ -1,4 +1,4 @@
-package Polimorfismo;
+package Polimorfismo.Filmes.test;
 
 import Polimorfismo.Filmes.Filme;
 import Polimorfismo.Filmes.Series;

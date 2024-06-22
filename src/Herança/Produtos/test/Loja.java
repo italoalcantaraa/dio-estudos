@@ -1,4 +1,8 @@
-package Herança.Produtos;
+package Herança.Produtos.test;
+
+import Herança.Produtos.Alimento;
+import Herança.Produtos.Livro;
+import Herança.Produtos.ProdutoEletronico;
 
 public class Loja {
     public static void main(String[] args) {

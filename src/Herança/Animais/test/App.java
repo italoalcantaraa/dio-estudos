@@ -1,6 +1,11 @@
-package Herança.Animais;
+package Herança.Animais.test;
 
 import java.util.Scanner;
+
+import Herança.Animais.Cachorro;
+import Herança.Animais.Dragao;
+import Herança.Animais.Gato;
+import Herança.Animais.Pombo;
 
 public class App {
     public static void main(String[] args) {

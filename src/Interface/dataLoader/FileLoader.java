@@ -1,7 +1,11 @@
 package Interface.dataLoader;
 
-public class FileLoader implements DataLoader {
-    public void load() {
-        System.out.println("CARREGANDO DADOS DE ARQUIVOS");
-    }
+public class FileLoader implements DataLoader, DataRemove{
+        public void loader() {
+            System.out.println("Carregando dados de arquivos.");
+        }
+
+        public void Remove() {
+            System.out.println("Removendo dados de arquivos.");
+        }
 }
