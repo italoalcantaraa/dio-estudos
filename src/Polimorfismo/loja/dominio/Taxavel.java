@@ -1,5 +1,8 @@
 package Polimorfismo.loja.dominio;
 
-public interface Taxavel { 
-    double TaxaProduto();
-} 
+/**
+ * Taxavel
+ */
+public interface Taxavel {
+    double calcularTaxa();
+}

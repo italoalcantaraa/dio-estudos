@@ -1,14 +1,17 @@
 package Polimorfismo.loja.dominio;
 
+/**
+ * Computador
+ */
 public class Computador extends Produtos {
-    public static final double TAXA_PRODUTO = 0.20;
-
-    public Computador(String nome, double valor) {
-        super(nome, valor);
+    private static double TAXA_COMPUTADOR =  0.2;
+    public Computador(String nome, double preco) {
+        super(nome,preco);
     }
 
-    public double TaxaProduto() {
-        System.out.println("Calculando o imposto do computador...");
-        return this.valor * TAXA_PRODUTO;  
+    public double calcularTaxa() {
+        System.out.println("Calculando taxa do computador");
+        return this.preco * TAXA_COMPUTADOR;
     }
+    
 }

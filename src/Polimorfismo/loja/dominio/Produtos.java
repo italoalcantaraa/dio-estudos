@@ -1,21 +1,22 @@
 package Polimorfismo.loja.dominio;
 
+/**
+ * Produtos
+ */
 public abstract class Produtos implements Taxavel{
-    protected String nome;
-    protected double valor;
+    private String nome;
+    protected double preco;
 
-    public Produtos(String nome, double valor) {
+    public Produtos(String nome, double preco) {
         this.nome = nome;
-        this.valor = valor;
-        
+        this.preco = preco;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public double getPreco() {
-        return valor;
+        return preco;
     }
-    
-    public String getNome() {
-        return nome;       
-    }
-}
-
+};
