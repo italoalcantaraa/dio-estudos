@@ -1,4 +1,4 @@
-package Collection_Framework_API.OpercacoesBasicas;
+package Collection_Framework_API.OpercacoesBasicas.exer1;
 
 /**
  * Tarefa
@@ -12,5 +12,11 @@ public class Tarefa {
 
     public String getDescricao() {
         return descricao;
+    }
+
+    @Override
+    public String toString() {
+        String novaDescricao = String.format("Descrição: %s", descricao);
+        return novaDescricao;
     }
 }
