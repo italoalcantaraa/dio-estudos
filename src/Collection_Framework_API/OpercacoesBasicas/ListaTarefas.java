@@ -3,33 +3,36 @@ package Collection_Framework_API.OpercacoesBasicas;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * ListaTarefas
+ */
 public class ListaTarefas {
-    private List<Tarefa> tarefaList;
-     
+    private List<Tarefa> tarefasList;
+
     public ListaTarefas() {
-        tarefaList = new ArrayList<>();
+        tarefasList = new ArrayList<>();
     }
 
-    public void adicionarTarefa(String tarefa) {
-        tarefaList.add(new Tarefa(tarefa));
+    public void adicionarTarefa(String descricao) {
+        tarefasList.add(new Tarefa(descricao));
     }
 
     public void removerTarefa(String tarefa) {
         List<Tarefa> tarefasParaRemover = new ArrayList<>();
-        for (Tarefa t : tarefaList) {
-            if(t.getDescricao().equalsIgnoreCase(tarefa)) {
+
+        for (Tarefa t : tarefasList) {
+            if (t.getDescricao().equalsIgnoreCase(tarefa))
                 tarefasParaRemover.add(t);
-            }
         }
-
-        tarefaList.removeAll(tarefasParaRemover);
+        tarefasList.removeAll(tarefasParaRemover);
     }
 
-    public int obterNumeroTarefas() {
-        return tarefaList.size();
+    public int obterNumeroTotalTarefas() {
+        return tarefasList.size();
     }
 
-    public void obterDescricaoTarefa() {
-        System.out.println(tarefaList);
+    public void obterDescricoesTarefas() {
+        System.out.println(tarefasList);
     }
+
 }
