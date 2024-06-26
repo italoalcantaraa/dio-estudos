@@ -1,9 +1,12 @@
 package Collection_Framework_API.OpercacoesBasicas.exer2;
 
+/**
+ * Item
+ */
 public class Item {
-    public String nome;
-    public double preco;
-    public int quantidade;
+    private String nome;
+    private double preco;
+    private int quantidade;
 
     public Item(String nome, double preco, int quantidade) {
         this.nome = nome;
@@ -14,7 +17,7 @@ public class Item {
     public String getNome() {
         return nome;
     }
-
+ 
     public double getPreco() {
         return preco;
     }
@@ -22,21 +25,4 @@ public class Item {
     public int getQuantidade() {
         return quantidade;
     }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public String toString() {
-		return "Produto: " + nome + " Preço: " + preco + " Quantidade: " + quantidade;
-	}
-
 }

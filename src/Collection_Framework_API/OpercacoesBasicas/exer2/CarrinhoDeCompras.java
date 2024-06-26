@@ -5,68 +5,78 @@ import java.util.List;
 
 import Collection_Framework_API.OpercacoesBasicas.exer1.Tarefa;
 
+/**
+ * CarrinhoDeCompras
+ */
 public class CarrinhoDeCompras {
-    private List<Item> carrinho;
-    private double total;
+    List<Item> carrinhoList;
 
-    private CarrinhoDeCompras() {
-        carrinho = new ArrayList<>();
-        total = 0;
+    // Contrutor
+    public CarrinhoDeCompras() {
+        carrinhoList = new ArrayList<Item>();
     }
 
+    // Adiciona o item ao carrinho
     public void adicionarItem(String nome, double preco, int quantidade) {
-        if (validaAdicionarItem(preco, quantidade)) {
-            Item item = new Item(nome, preco, quantidade);
-            carrinho.add(item);
+        if (validaItem(preco, quantidade)) {
+            carrinhoList.add(new Item(nome, preco, quantidade));
+        } else {
+            System.out.println("Não foi possível adicionar o produto " + nome + ".\n");
         }
-    }
-
-    public void removerItem(String nome) {
-        List<Item> produtosParaRemover = new ArrayList<>();
-
-        for (Item t : carrinho) {
-            if (t.getNome().contentEquals(nome)) {
-                produtosParaRemover.add(t);
-            }
-        }
-        carrinho.removeAll(produtosParaRemover);
     };
 
-    public double valorTotal() {
-        for (Item i : carrinho) {
-            total += i.getPreco() * i.getQuantidade();
-        }
-        return total;
-    }
-
-    public void exibitItens() {
-        if (!carrinho.isEmpty()) {
-            System.out.println(toString());
-        } else {
-            System.out.println("Não há itens na lista");
-        }
-    }
-
-    @Override
-    public String toString() {
-        String informacoes  = String.format("Produto: %s", carrinho);
-        return informacoes;
-    }
-
-    public boolean validaAdicionarItem(double preco, int quantidade) {
-        if (preco < 0 || quantidade < 1) {
-            System.err.println("Valor inválido!");
+    // Verifica se o preço e a quantidade são válidos
+    public boolean validaItem(double preco, int quantidade) {
+        if (preco < 0 || quantidade <= 0)
             return false;
-        }
 
         return true;
     }
 
-    public static void main(String[] args) {
-        CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
+    // remover os itens
+    public void removerItem(String item) {
+        if (carrinhoList.isEmpty()) {
+            System.out.println("Lista vazia!");
+            return;
+        }
 
-        carrinhoDeCompras.adicionarItem("Maça", 2, 2);
-        carrinhoDeCompras.adicionarItem("Melão", 7, 1);
-        carrinhoDeCompras.exibitItens();
+        List<Item> removerItens = new ArrayList<Item>();
+
+        for (Item i : carrinhoList) {
+            if (i.getNome().equalsIgnoreCase(item)) {
+                removerItens.add(i);
+            }
+        }
+        carrinhoList.removeAll(removerItens);
+    }
+
+    // Calcula o valor total
+    public double valorTotal() {
+        double total = 0.0;
+        for (Item item : carrinhoList) {
+            total += item.getPreco() * item.getQuantidade();
+        }
+        return total;
+    }
+
+    // Exibe os itens do carrinho
+    public void exibirItens() {
+        if (!carrinhoList.isEmpty()) {
+            for (Item i : carrinhoList) {
+                System.out.println(toString(i));
+                System.out.println("-----------------");
+            }
+        } else {
+            System.out.println("Carrinho vazio!");
+        }
+    }
+
+    // retorna a informação do protudo já formatada
+    public String toString(Item item) {
+        String informacoes = " ";
+
+        informacoes = String.format("Nome: %s \nPreço: %s \nQuantidade: %s", item.getNome(), item.getPreco(),
+                item.getQuantidade());
+        return informacoes;
     }
 }

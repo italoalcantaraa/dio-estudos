@@ -7,44 +7,42 @@ import java.util.List;
  * ListaTarefas
  */
 public class ListaTarefas {
-    private List<Tarefa> tarefasList;
+    List<Tarefa> tarefas;
 
     public ListaTarefas() {
-        tarefasList = new ArrayList<>();
+        this.tarefas = new ArrayList<Tarefa>();
     }
 
     public void adicionarTarefa(String descricao) {
-        tarefasList.add(new Tarefa(descricao));
+        tarefas.add(new Tarefa(descricao));
     }
 
-    public void removerTarefa(String tarefa) {
-        List<Tarefa> tarefasParaRemover = new ArrayList<>();
-
-        for (Tarefa t : tarefasList) {
-            if (t.getDescricao().equalsIgnoreCase(tarefa))
-                tarefasParaRemover.add(t);
+    public void removerTarefa(String descricao) {
+        List<Tarefa> removerTarefas = new ArrayList<Tarefa>();
+        for (Tarefa t : tarefas) {
+            if (t.getDescricao().equalsIgnoreCase(descricao)) {
+                removerTarefas.add(t);
+            }
         }
-        tarefasList.removeAll(tarefasParaRemover);
+        tarefas.removeAll(removerTarefas);
     }
 
-    public int obterNumeroTotalTarefas() {
-        return tarefasList.size();
-    }   
-
-    public void obterDescricoesTarefas() {
-        System.out.println(tarefasList);
+    public void limparTarefas() {
+        tarefas.clear();
     }
 
-    public static void main(String[] args) {
-        ListaTarefas listaTarefas = new ListaTarefas();
+    public int obterNumeroTarefas() {
+        return tarefas.size();
+    }
 
-        listaTarefas.adicionarTarefa("Tarefa 01");
-        listaTarefas.adicionarTarefa("Tarefa 02");
-        listaTarefas.obterDescricoesTarefas();
-
-        listaTarefas.removerTarefa("Tarefa 01");
-        listaTarefas.obterDescricoesTarefas();
-
-        System.out.printf("Quantidade de tarefas: %s", listaTarefas.obterNumeroTotalTarefas());
+    public void obterDescricaoTarefas() {
+        if(!tarefas.isEmpty()) {
+            for (Tarefa t : tarefas) {
+                System.out.println(t.getDescricao());
+            }
+        }else{
+            System.out.println("Lista vazia!");
+        }
+        
     }
 }
