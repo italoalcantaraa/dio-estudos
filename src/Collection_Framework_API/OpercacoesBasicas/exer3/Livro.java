@@ -1,5 +1,8 @@
 package Collection_Framework_API.OpercacoesBasicas.exer3;
 
+/**
+ * Livro
+ */
 public class Livro {
     private String titulo;
     private String autor;
@@ -9,24 +12,24 @@ public class Livro {
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
+
     }
 
     @Override
     public String toString() {
-        String information = String.format("Título: %s \nAno de publicação: %s \nAutor: %s", titulo, anoPublicacao,
-                autor);
-        return information;
+        String informacoes = String.format("Livro: %s \nAutor: %s \nAno de publicação: %s", titulo, autor, anoPublicacao);
+        return informacoes;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public int getAnoPublicacao() {
+        return anoPublicacao;
     }
 
     public String getAutor() {
         return autor;
     }
 
-    public int getAnoPublicacao() {
-        return anoPublicacao;
+    public String getTitulo() {
+        return titulo;
     }
 }
