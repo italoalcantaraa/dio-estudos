@@ -2,7 +2,7 @@ package treinos.listas.dominio;
 
 import java.util.Objects;
 
-public class Pessoa02 implements Comparable<Pessoa02> {
+public class Pessoa02 {
     private String nome;
     private int idade;
     private char sexo;
@@ -21,10 +21,6 @@ public class Pessoa02 implements Comparable<Pessoa02> {
     // }
 
     // Compara por nome
-    @Override
-    public int compareTo(Pessoa02 nomePessoa) {
-        return nome.compareTo(nomePessoa.getNome());
-    }
 
     @Override
     public String toString() {
