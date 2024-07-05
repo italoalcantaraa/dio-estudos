@@ -6,9 +6,14 @@ import java.time.format.DateTimeFormatter;
 public class TestAgendaEvento {
     public static void main(String[] args) {
         AgendaEvento evento = new AgendaEvento();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        evento.adicionarEvento(LocalDate.parse("20/05/2025", formatter), "Evento 1", "Nome 1");
+        
+        evento.adicionarEvento(LocalDate.of(2025, 5, 12), "Evento 1", "Nome 1");
+        evento.adicionarEvento(LocalDate.of(2024, 2, 02), "Evento 2", "Nome 2");
+        evento.adicionarEvento(LocalDate.of(2024,7, 5), "Evento 3", "Nome 3");
+        evento.adicionarEvento(LocalDate.of(2026, 12, 22), "Evento 4", "Nome 4");
         
         evento.exibirEventos();
+        System.out.println("* Proximo evento *");
+        evento.obterProximoEvento();
     }
 }

@@ -21,4 +21,17 @@ public class AgendaEvento {
         Map<LocalDate, Evento> ordenaEventoMap = new TreeMap<>(agendaEventoMap);
         System.out.println(ordenaEventoMap);
     }
+
+    public void obterProximoEvento() {
+        LocalDate dataAtual = LocalDate.now();
+        Map<LocalDate, Evento> ordenaEventoMap = new TreeMap<>(agendaEventoMap);
+        System.out.println(ordenaEventoMap);
+
+        for (var entryMap : ordenaEventoMap.keySet()) {
+            if(entryMap.isAfter(dataAtual) || entryMap.isEqual(dataAtual)) {
+                    System.out.println("Data: " + entryMap + ordenaEventoMap.get(entryMap));        
+                break;
+            }
+        }
+        }
 }
