@@ -7,6 +7,5 @@ public class TestLivraria {
         books.addBook("23132", "Java: The Complete Reference", " Herbert Schildt", 317.10);
 
         books.displayBook();
-
     }
 }

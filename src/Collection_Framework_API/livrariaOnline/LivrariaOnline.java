@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class LivrariaOnline {
     Map<String, Livro> booksMap = new HashMap<>();
-
+    
     public void addBook(String link, String title, String author, Double price) {
         booksMap.put(link, new Livro(title, author, price));
     }
