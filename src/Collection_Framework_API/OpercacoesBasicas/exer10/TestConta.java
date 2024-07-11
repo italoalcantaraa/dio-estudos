@@ -19,7 +19,6 @@ public class TestConta {
         listConta.add(conta4);
         listConta.add(conta5);
 
-
         for(Conta c : listConta){
             System.out.println(c.getSale());
         }
