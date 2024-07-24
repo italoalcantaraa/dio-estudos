@@ -1,6 +1,7 @@
 package streamAPI.lambdas.Supleier;
 
 import java.util.List;
+import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 /**
@@ -9,11 +10,13 @@ import java.util.stream.Stream;
 public class exe1 {
 
     public static void main(String[] args) {
-        List<String> greetings = Stream.generate(() -> "Olá!")
+        Supplier<String> greetings = () -> "Olá"; 
+        
+        List<String> greetingsList = Stream.generate(() -> "Olá!")
         .limit(3)
-        .toList();        
+        .toList();   
         
         // greetings.forEach(e -> System.out.println(e));
-        greetings.forEach(System.out::println);
+        greetingsList.forEach(System.out::println);
     }
 }
