@@ -1,4 +1,4 @@
-package streamAPI.lambdas.functionaInterface;
+package streamAPI.lambdas.consumer;
 
 import java.util.ArrayList;
 import java.util.List;

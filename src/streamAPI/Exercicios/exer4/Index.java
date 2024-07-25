@@ -12,7 +12,7 @@ public class Index {
 
         numeros.removeIf((n) -> n % 2 != 0);
 
-        System.out.println("Lista sem números ímpares");
+        System.out.println("Lista sem números ímpares: ");
         numeros.forEach(System.out::println);
     }
 }
