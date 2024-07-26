@@ -12,7 +12,7 @@ public class exe1 {
 
         // wordList.stream().
         // filter(filterWord).forEach(System.out::println);
-
+        
         wordList.stream().filter(
                 (word) -> word.length() >= 5).forEach(System.out::println);
     }
