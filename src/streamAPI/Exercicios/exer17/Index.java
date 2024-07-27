@@ -9,7 +9,7 @@ public class Index {
 
         List<Integer> numList = List.of(1, 2, 3, 5, 8, 22, 29);
 
-        System.out.print("Números pares: ");
+        System.out.print("Números primos: ");
         numList.stream()
                 .filter(n -> checkCousin(n))
                 .forEach(n -> {
