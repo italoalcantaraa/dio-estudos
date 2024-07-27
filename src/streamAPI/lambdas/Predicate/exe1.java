@@ -15,5 +15,6 @@ public class exe1 {
         
         wordList.stream().filter(
                 (word) -> word.length() >= 5).forEach(System.out::println);
+                
     }
 }
